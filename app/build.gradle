@@ -1,0 +1,16 @@
+apply plugin: 'com.android.application'
+apply from: '../dependencies.gradle'
+apply plugin: 'kotlin-android'
+
+android {
+    defaultConfig {
+        applicationId "com.example.wandnroidkotlin"
+    }
+
+}
+
+dependencies {
+    
+    implementation project(path: ':common')
+
+}
