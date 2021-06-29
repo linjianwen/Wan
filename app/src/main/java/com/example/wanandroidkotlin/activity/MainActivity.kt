@@ -26,7 +26,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private fun setBottomBar() {
         val navGraphIds = listOf<Int>(R.navigation.navi_home)
-    }
+    }asdf
 
 
 }
