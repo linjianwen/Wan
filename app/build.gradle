@@ -12,5 +12,6 @@ android {
 dependencies {
     
     implementation project(path: ':common')
+    implementation project(path: ':home')
 
 }

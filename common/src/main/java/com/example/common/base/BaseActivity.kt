@@ -20,9 +20,8 @@ abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity {
 
     var mBinding: T? = null
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         mLoadingDialog = LoadingDialog(this, false)
         mBinding = DataBindingUtil.setContentView(this, getLayoutId())
         initData(savedInstanceState)

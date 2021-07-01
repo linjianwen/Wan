@@ -41,6 +41,12 @@ abstract class BaseFragment<T : ViewDataBinding> : Fragment() {
         return mBaseContainBinding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        mLoadingDialog = LoadingDialog(view.context, false)
+        initData()
+    }
+
     abstract fun getLayoutId(): Int
     abstract fun initData()
 

@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:startDestination="@id/homeFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_project"
+    app:startDestination="@id/projectFragment">
 
 
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.wanandroidkotlin.fragment.HomeFragment"
-        android:label="HomeFragment" />
+        android:id="@+id/projectFragment"
+        android:name="com.example.wanandroidkotlin.fragment.ProjectFragment"
+        android:label="ProjectFragment"
+        tools:layout="@layout/frg_project">
+        <action
+            android:id="@+id/action_projectFragment_to_projectContentFragment"
+            app:destination="@id/projectContentFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/projectContentFragment"
+        android:name="com.example.wanandroidkotlin.fragment.ProjectContentFragment"
+        android:label="ProjectContentFragment"
+        tools:layout="@layout/frg_project_content" />
 </navigation>
